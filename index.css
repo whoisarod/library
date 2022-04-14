@@ -5,6 +5,11 @@ html, body {
     padding: 1rem;
 }
 
+.my-library {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .my-book {
     display: grid;
     grid-template-columns: 1rem 8rem;
@@ -19,14 +24,30 @@ html, body {
 
 .my-book-cover {
     grid-area: cover;
-    height: 8rem;
+    height: 7rem;
+    background-color: lightgreen;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.3rem;
 }
 
 .my-book-spine {
     grid-area: spine;
+    background-color: #4a4238;
+    border-top-left-radius: .3rem;
 }
 
 .my-book-footer {
     grid-area: footer;
     padding: .2rem;
+    background-color: lightgray;
+    border-bottom-left-radius: .3rem;
+}
+
+.my-book:nth-of-type(even) .my-book-cover {
+    background-color: lightblue;
+}
+
+.my-book:nth-of-type(even) .my-book-spine {
+    background-color: #e1b07e;
 }
