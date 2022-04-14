@@ -6,8 +6,9 @@ html, body {
 }
 
 .my-library {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, calc(100% / 3));
 }
 
 .my-book {
@@ -28,7 +29,7 @@ html, body {
     background-color: lightgreen;
     text-align: center;
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .my-book-spine {

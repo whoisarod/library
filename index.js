@@ -19,13 +19,12 @@ function getBookHTML(book) {
 `
 }
 
-getBooks().then(books => {
-    let sampleBook = books[0];
-    console.log(sampleBook);
-
+function displayLibrary(books) {
     document.body.innerHTML = `
         <div class="my-library">
             ${books.map(getBookHTML).join('')}
         </div>
     `
-});
+}
+
+getBooks().then(displayLibrary).catch(e => console.log(e));
