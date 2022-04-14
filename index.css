@@ -4,3 +4,29 @@ html, body {
     background-color: lightyellow;
     padding: 1rem;
 }
+
+.my-book {
+    display: grid;
+    grid-template-columns: 1rem 8rem;
+    grid-template-areas: 
+        "spine cover"
+        "footer footer";
+}
+
+.my-book div {
+    border: .1rem solid black;
+}
+
+.my-book-cover {
+    grid-area: cover;
+    height: 8rem;
+}
+
+.my-book-spine {
+    grid-area: spine;
+}
+
+.my-book-footer {
+    grid-area: footer;
+    padding: .2rem;
+}
